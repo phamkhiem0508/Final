@@ -10,7 +10,7 @@
 using namespace std;
 
 class Doctor : public Person {
-private:
+protected:
     string speciality;
     string licenseNumber;
     double salary;
