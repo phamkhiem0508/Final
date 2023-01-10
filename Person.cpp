@@ -3,6 +3,7 @@
 //
 
 #include "Person.h"
+#include "IDGenerator.h"
 
 Person::Person() {};
 
@@ -22,6 +23,15 @@ string Person::getAddress() {
 
 string Person::getPhoneNumber() {
     return this->phoneNumber;
+}
+
+string Person::getID() {
+   return this->id;
+}
+
+void Person::generateID(string fileName) {
+    IDGenerator id(fileName);
+    this->id = id.generate();
 }
 
 void Person::setName(string newName) {

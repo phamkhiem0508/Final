@@ -1,15 +1,22 @@
 #include <iostream>
-#include <fstream>
-#include "IDGenerator.h"
-#include "string"
 using namespace std;
-#include <fstream>
-
+#include "Doctor.h"
 
 int main() {
-    IDGenerator order("data.txt");
-//    string id = order.generate();
-//    cout << id;
+    Doctor d9("Louis 9999", "123 Main St", "555-555-5555", "Surgeon", "A12345");
+    d9.writeDoctorToFile();
+
+    Doctor d8("Louis", "123 Main St", "555-555-5555", "Surgeon", "A12345");
+    d8.writeDoctorToFile();
+
+    Doctor d6("Louis", "123 Main St", "555-555-5555", "Surgeon", "A12345");
+    d6.writeDoctorToFile();
+
+    Doctor d7("John Doe", "123 Main St", "555-555-5555", "Surgeon", "A12345");
+
+    d7.updateDoctorInFile("ID4",d9);
+
+    d7.deleteDoctorFromFile("ID5");
 
 
 }

@@ -10,7 +10,7 @@ class Utility {
     Utility();
 
     //Methods
-    getDataLineByLine()
+//    getDataLineByLine();
 };
 
 

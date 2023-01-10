@@ -11,6 +11,7 @@ using namespace std;
 
 class Person {
 protected:
+    string id;
     string name;
     string address;
     string phoneNumber;
@@ -26,6 +27,10 @@ public:
     string getAddress();
 
     string getPhoneNumber();
+
+    string getID();
+
+    void generateID(string fileName);
 
     void setName(string newName);
 

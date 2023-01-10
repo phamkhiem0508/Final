@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <algorithm>
 #include <sstream>
 #include "string"
 
@@ -34,7 +33,11 @@ IDGenerator::IDGenerator(string filename): m_filename(filename), m_counter(0) {
         istringstream iss(line);
         getline(iss, id, ',');
 
-        cout <<id << endl;
+        if(id.find("ID") == 0) {
+            int idNum = stoi(id.substr(2)); // convert the string ID to int, assuming the pattern is "ID"+number
+            m_counter = max(m_counter, idNum);
+        }
+
     }
     file.close();
     m_counter++;
@@ -47,9 +50,6 @@ IDGenerator::~IDGenerator() {
 
 string IDGenerator::generate() {
     string id = "ID" + to_string(m_counter++);
-    ofstream file(m_filename, ios::app);
-    file << id << endl;
-    file.close();
     return id;
 }
 
