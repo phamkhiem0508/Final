@@ -4,7 +4,7 @@
 
 #ifndef FINAL_PERSON_H
 #define FINAL_PERSON_H
-
+#include "IDGenerator.h"
 #include "string"
 
 using namespace std;

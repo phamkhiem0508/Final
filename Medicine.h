@@ -6,6 +6,8 @@
 #define FINAL_MEDICINE_H
 
 #include "string"
+#include "IDGenerator.h"
+#include "vector"
 
 using namespace std;
 
@@ -20,6 +22,7 @@ protected:
     bool prescriptionRequired;
     string type;
     string dosage;
+    string medicineID;
 public:
     //constructor
     Medicine();
@@ -47,6 +50,16 @@ public:
     void operator-=(unsigned int quantity);
 
     void operator+=(unsigned int quantity);
+
+    void writeMedicineToFile();
+
+    void generateID(string fileName);
+
+    string getMedicineID();
+
+    void updateMedicineInFile(string id, Medicine newMedicine);
+
+    void deleteMedicineFromFile(string id);
 
 };
 

@@ -20,11 +20,9 @@ vector<T> Utility::readFromFile(string fileName) {
 }
 
 template<typename T>
-void Utility::writeToFile(string fileName, vector<T> objects) {
+void Utility::writeToFile(string fileName, string data) {
     ofstream outfile(fileName);
-    for (const auto &object : objects) {
-        outfile << object.toCSV() << endl;
-    }
+    outfile << data << endl;
     outfile.close();
 }
 

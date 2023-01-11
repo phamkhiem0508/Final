@@ -16,7 +16,7 @@ public:
     static vector<T> readFromFile(string fileName);
 
     template<typename T>
-    static void writeToFile(string fileName, vector<T> objects);
+    static void writeToFile(string fileName, string data);
 
     template<typename T>
     static void deleteFromFile(string fileName, string id);
