@@ -31,6 +31,7 @@ string Person::getID() {
 void Person::generateID(string fileName) {
     IDGenerator id(fileName);
     this->id = id.generate();
+
 }
 
 void Person::setName(string newName) {
